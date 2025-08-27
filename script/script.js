@@ -63,7 +63,7 @@ div.className = "bg-[#f5fff6] flex justify-between items-center h-[86px] mt-[16p
 div.innerHTML = `
   <div>
     <h1>${cardMainName}</h1>
-    <h1 class="text-gray-500">999</h1>
+    <h1 class="text-gray-500">${cardId}</h1>
   </div>
   <h1>${data}</h1>
 `;
