@@ -1,348 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emergency Service Directory</title>
-  <!-- css link  -->
-  <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service Directory</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="style/style.css" />
 
-  <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-   <!-- tailwind and daisyUi link  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind and daisyUi link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#f5fff6]">
+    <!-- class="border-dotted border-[5px] border-red-800" -->
 
-</head>
-<body class="bg-[#f5fff6]">
-  <!-- class="border-dotted border-[5px] border-red-800" -->
+    <header class="bg-white">
+      <!-- navbar  -->
+      <nav
+        class="flex justify-between h-[100px] items-center px-[60px] max-sm:px-[10px] max-sm:justify-between max-sm:h-[150px]"
+      >
+        <!-- img / logo section  -->
+        <div class="flex items-center w-[195px] h-[50px]">
+          <img
+            class="w-[50px] h-[50px] max-sm:h-[40px]"
+            src="./assets/logo.png"
+            alt="Logo"
+          />
+          <h1
+            class="text-[#006747] font-bold text-[25px] ml-[10px] max-sm:text-[18px]"
+          >
+            Emergency Service
+          </h1>
 
-
-  <header class="bg-white">
-    <!-- navbar  -->
-     <nav class="flex justify-between h-[100px] items-center px-[60px] max-sm:px-[10px] max-sm:justify-between max-sm:h-[150px]">
-      <!-- img / logo section  -->
-      <div class="flex items-center w-[195px] h-[50px]">
-        <img class="w-[50px] h-[50px] max-sm:h-[40px]" src="./assets/logo.png" alt="Logo">
-      <h1 class="text-[#006747] font-bold text-[25px] ml-[10px] max-sm:text-[18px] ">Emergency Service</h1>
-
-      <!-- <h1 class="text-[#006747] font-bold text-[25px]"></h1> -->
-      </div>
-
-      <!-- button section  -->
-      <div class="flex gap-5 max-sm:gap-2 max-sm:justify-end max-sm:flex-wrap">
-
-        <!-- 1st button  -->
-        <div class="w-[123px] max-sm:w-[90px] bg-[#41ff6b1a] h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer ">
-          <p id="hert-counter" class="font-bold">0</p>
-          <img class="w-[30px] h-[30px] ml-[10px]" src="./assets/heart.png" alt="">
+          <!-- <h1 class="text-[#006747] font-bold text-[25px]"></h1> -->
         </div>
 
-        <!-- 2nd button  -->
-        <div class="w-[123px] max-sm:w-[90px] bg-[#41ff6b1a] h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer">
-          <p id="coin">100</p>
-          <img class="w-[30px] h-[30px] ml-[10px]" src="./assets/coin.png" alt="">
+        <!-- button section  -->
+        <div
+          class="flex gap-5 max-sm:gap-2 max-sm:justify-end max-sm:flex-wrap"
+        >
+          <!-- 1st button  -->
+          <div
+            class="w-[123px] max-sm:w-[90px] bg-[#41ff6b1a] h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer"
+          >
+            <p id="hert-counter" class="font-bold">0</p>
+            <img
+              class="w-[30px] h-[30px] ml-[10px]"
+              src="./assets/heart.png"
+              alt=""
+            />
+          </div>
+
+          <!-- 2nd button  -->
+          <div
+            class="w-[123px] max-sm:w-[90px] bg-[#41ff6b1a] h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer"
+          >
+            <p id="coin">100</p>
+            <img
+              class="w-[30px] h-[30px] ml-[10px]"
+              src="./assets/coin.png"
+              alt=""
+            />
+          </div>
+
+          <!-- 3rd button  -->
+          <div
+            class="w-[123px] max-sm:w-[90px] bg-[#00A63E] h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer"
+          >
+            <p id="copy-counter" class="text-white">0</p>
+            <p class="text-white ml-[10px]">Copy</p>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner section  -->
+      <section>
+        <div
+          class="hero-section h-[239px] flex flex-col justify-center items-center"
+        >
+          <img class="w-[92px] h-[92px]" src="./assets/logo-dark.png" alt="Logo" />
+          <h1
+            class="text-[40px] text-white font-[600] max-sm:text-[25px] max-sm:mt-[10px]"
+          >
+            জরুরি সেবা ডিরেক্টরি
+          </h1>
+          <h1
+            class="text-[20px] text-white font-[600] max-sm:text-[17px] max-sm:text-center max-sm:mt-[10px]"
+          >
+            Government Emergency Services at Your Fingertip – A Project by
+            Government of the People’s Republic of Bangladesh
+          </h1>
+        </div>
+      </section>
+    </header>
+
+    <!-- main section  -->
+
+    <main class="mt-[48px]">
+      <div
+        class="grid grid-cols-12 gap-5 px-[30px] max-sm:flex max-sm:flex-col mb-[68px]"
+      >
+        <!-- box section  -->
+
+        <div
+          class="lg:col-span-9 space-y-6 max-sm:flex max-sm:flex-col md:col-span-7"
+        >
+          <!-- container 1 -->
+          <div
+            class="flex gap-5 max-sm:flex-col max-sm:items-center md:flex-col lg:flex-row md:items-center"
+          >
+            <!-- 1st box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/emergency.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">জাতীয় জরুরি সেবা</h1>
+                <p class="text-gray-500">National Emergency</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">999</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  সার্বজনীন
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+            <!-- 2nd box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/police.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">পুলিশ</h1>
+                <p class="text-gray-500">Police</p>
+              </div>
+
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">999</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  পুলিশ
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+            <!-- 3rd box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets//fire-service.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">ফায়ার সার্ভিস</h1>
+                <p class="text-gray-500">Fire Service</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">999</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  ফায়ার
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+          </div>
+
+          <!-- ////// -->
+          <!-- container 2 -->
+          <div
+            class="flex gap-5 max-sm:flex-col max-sm:items-center md:flex-col lg:flex-row md:items-center"
+          >
+            <!-- 1st box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/ambulance.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">অ্যাম্বুলেন্স</h1>
+                <p class="text-gray-500">Ambulance</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">1994-999999</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  স্বাস্থ্য
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+            <!-- 2nd box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/emergency.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">নারী ও শিশু সহায়তা</h1>
+                <p class="text-gray-500">Women & Child Helpline</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">109</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  সহায়তা
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+            <!-- 3rd box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/emergency.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">দুদক</h1>
+                <p class="text-gray-500">Anti-Corruption</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">999</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  সরকারি
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+          </div>
+
+          <!-- ////// -->
+          <!-- container 3 -->
+          <div
+            class="flex gap-5 max-sm:flex-col max-sm:items-center md:flex-col lg:flex-row md:items-center"
+          >
+            <!-- 1st box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/emergency.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">বিদ্যুৎ বিভ্রাট</h1>
+                <p class="text-gray-500">Electricity Outage</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">16216</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  বিদ্যুৎ
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+            <!-- 2nd box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/brac.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">ব্র্যাক</h1>
+                <p class="text-gray-500">Brac</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">16445</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  এনজিও
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+            <!-- 3rd box  -->
+            <div
+              class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]"
+            >
+              <div class="flex justify-between items-center">
+                <div
+                  class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center"
+                >
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./assets/Bangladesh-Railway.png"
+                    alt="Emergency"
+                  />
+                </div>
+                <i
+                  class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"
+                ></i>
+              </div>
+              <div class="mt-[16px]">
+                <h1 class="font-bold text-[24px]">বাংলাদেশ রেলওয়ে</h1>
+                <p class="text-gray-500">Bangladesh Railway</p>
+              </div>
+              <div class="mt-[16px]">
+                <p class="font-bold text-[25px]">163</p>
+                <h1
+                  class="bg-gray-200 w-[100px] h-[37px] rounded-[16px] content-center text-center"
+                >
+                  পরিবহন
+                </h1>
+              </div>
+              <div class="mt-[16px] flex gap-x-3">
+                <button
+                  class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"
+                >
+                  <i class="fa-solid fa-copy"></i> Copy
+                </button>
+
+                <button
+                  class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+            <!-- ///// -->
+          </div>
         </div>
 
-        <!-- 3rd button  -->
-        <div class="w-[123px] max-sm:w-[90px] bg-[#00A63E] h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer">
-          <p id="copy-counter" class="text-white">0</p>
-          <p class="text-white ml-[10px]">Copy</p>
+        <!-- //////// -->
+
+        <!-- history  -->
+        <div
+          class="lg:col-span-3 bg-white md:col-span-5 p-[24px] rounded-[12px]"
+        >
+          <!-- 1st section  -->
+          <div class="flex justify-between items-center">
+            <h1 class="font-[600]">
+              <i class="fa-solid fa-clock"></i> Call History
+            </h1>
+            <div class="lg:w-[114px] max-sm:w-[90px] bg-[#00A63E] lg:h-[52px]
+            rounded-[50px] flex justify-center items-center cursor-pointer
+            md:w-[90px] md:h-[40px] max-sm:h-[52px] hover:bg-gray-400"">
+            <p id="clear-history" class="text-white ml-[10px]">Clear</p>
+          </div>
         </div>
 
-      </div>
-     </nav>
-
-     <!-- banner section  -->
-     <section>
-      <div class="hero-section h-[239px] flex flex-col justify-center items-center">
-        <img class="w-[92px] h-[92px]" src="./assets/logo.png" alt="Logo">
-        <h1 class="text-[40px] text-white font-[600] max-sm:text-[25px] max-sm:mt-[10px]">জরুরি সেবা ডিরেক্টরি</h1>
-        <h1 class="text-[20px] text-white font-[600] max-sm:text-[17px] max-sm:text-center max-sm:mt-[10px]">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</h1>
-      </div>
-     </section>
-  </header>
-
-
-  <!-- main section  -->
-
-  <main class="mt-[48px]">
-
-    <div class=" grid grid-cols-12 gap-5 px-[30px] max-sm:flex max-sm:flex-col mb-[68px]">
-
-      <!-- box section  -->
-
-      <div class="lg:col-span-9 space-y-6 max-sm:flex max-sm:flex-col  md:col-span-7">
-
-        <!-- container 1 -->
-      <div class="flex gap-5 max-sm:flex-col max-sm:items-center md:flex-col lg:flex-row md:items-center">
-          <!-- 1st box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">জাতীয় জরুরি সেবা</h1>
-            <p class="text-gray-500">National Emergency</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">999</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">সার্বজনীন</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-          <!-- 2nd box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class="w-[32px] h-[32px]" src="./assets/police.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">পুলিশ</h1>
-            <p class="text-gray-500">Police</p>
-          </div>
-
-          <div class=" mt-[16px]">
-            <p class="font-bold text-[25px]">999</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">পুলিশ</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-          <!-- 3rd box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class="w-[32px] h-[32px]" src="./assets//fire-service.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">ফায়ার সার্ভিস</h1>
-            <p class="text-gray-500">Fire Service</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">999</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">ফায়ার</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-  
-        
-      </div>
-
-      <!-- ////// -->
-        <!-- container 2 -->
-      <div class="flex gap-5 max-sm:flex-col max-sm:items-center  md:flex-col lg:flex-row md:items-center">
-          <!-- 1st box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class="w-[32px] h-[32px]" src="./assets/ambulance.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">অ্যাম্বুলেন্স</h1>
-            <p class="text-gray-500">Ambulance</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">1994-999999</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">স্বাস্থ্য</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-          <!-- 2nd box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">নারী ও শিশু সহায়তা</h1>
-            <p class="text-gray-500">Women & Child Helpline</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">109</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">সহায়তা</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-          <!-- 3rd box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">দুদক</h1>
-            <p class="text-gray-500">Anti-Corruption</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">999</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">সরকারি</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-  
-        
-      </div>
-
-      <!-- ////// -->
-        <!-- container 3 -->
-      <div class="flex gap-5 max-sm:flex-col max-sm:items-center  md:flex-col lg:flex-row md:items-center">
-          <!-- 1st box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class=" w-[32px] h-[32px]" src="./assets/emergency.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">বিদ্যুৎ বিভ্রাট</h1>
-            <p class="text-gray-500">Electricity Outage</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">16216</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">বিদ্যুৎ</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-          <!-- 2nd box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class=" w-[32px] h-[32px]" src="./assets/brac.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">ব্র্যাক</h1>
-            <p class="text-gray-500">Brac</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">16445</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">এনজিও</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-          </div>
-         </div>
-    <!-- ///// -->
-          <!-- 3rd box  -->
-         <div class="fast-box w-[350px] h-[330px] shadow-md bg-white p-[22px] rounded-[12px]">
-
-          <div class="flex justify-between items-center">
-            <div class="w-[60px] h-[60px] bg-[#ffe3e2] rounded-[16px] flex justify-center items-center">
-              <img class=" w-[32px] h-[32px]" src="./assets/Bangladesh-Railway.png" alt="Emergency">
-            </div>
-            <i class="fa-regular fa-heart w-[24px] h-[24px] text-[24px] cursor-pointer"></i>
-          </div>
-          <div class="mt-[16px]">
-            <h1 class="font-bold text-[24px]">বাংলাদেশ রেলওয়ে</h1>
-            <p class="text-gray-500">Bangladesh Railway</p>
-          </div>
-          <div class="mt-[16px]">
-            <p class="font-bold text-[25px]">163</p>
-            <h1 class="bg-gray-200  w-[100px]  h-[37px] rounded-[16px] content-center text-center">পরিবহন</h1>
-          </div>
-          <div class="mt-[16px] flex gap-x-3">
-
-            <button class="btn w-[146px] h-[40px] text-gray-500 hover:bg-black hover:text-white copy-btn"><i class="fa-solid fa-copy"></i> Copy</button>
-
-            <button class="btn w-[146px] bg-green-500 text-white h-[40px] call-btn hover:bg-gray-400"><i class="fa-solid fa-phone"></i> Call</button>
-
-          </div>
-         </div>
-    <!-- ///// -->
-  
-        
-      </div>
-
-      </div>
-
-      <!-- //////// -->
-
-         <!-- history  -->
-      <div class="lg:col-span-3 bg-white md:col-span-5 p-[24px] rounded-[12px]">
-
-        <!-- 1st section  -->
-        <div class="flex justify-between items-center">
-          <h1 class="font-[600]"><i class="fa-solid fa-clock"></i> Call History</h1>
-           <div class="lg:w-[114px] max-sm:w-[90px] bg-[#00A63E] lg:h-[52px] rounded-[50px] flex justify-center items-center cursor-pointer md:w-[90px] md:h-[40px] max-sm:h-[52px] hover:bg-gray-400"">
-          <p id="clear-history" class="text-white ml-[10px]">Clear</p>
-        </div>
-
-      </div>
-   
         <!-- 2nd section  -->
 
         <div id="history-main-container">
-
-             <!-- 1st product  -->
-         
-
+          <!-- 1st product  -->
         </div>
-
-        </div>
-      <!-- ///////// -->
-    </div>
       </div>
+    </main>
 
-
-    
-
-  </main>
-
-  <script src="script/script.js"></script>
-</body>
+    <script src="script/script.js"></script>
+  </body>
 </html>
