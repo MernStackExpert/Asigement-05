@@ -93,7 +93,7 @@ document.getElementById("clear-history").addEventListener('click' , function(){
 
        const cardId = copyButton.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
 
-       alert(`নাম্বার কপি হয়েছে ${cardId}`)
+       alert(`নাম্বার কপি হয়েছে: ${cardId}`)
        
        navigator.clipboard.writeText(cardId);
 
